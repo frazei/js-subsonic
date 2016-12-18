@@ -257,6 +257,11 @@
     },
     getBookmarks: function(cb) {
       this._execute("getBookmarks", null, cb);
+    },
+    jukeboxControl: function(action, params, cb) {
+      params = params || {};
+      params.action = action;
+      this._execute("jukeboxControl", params, cb);
     }
   };
 
